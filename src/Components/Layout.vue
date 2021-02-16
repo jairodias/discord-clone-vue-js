@@ -1,15 +1,19 @@
 <template>
     <div id="grid">
         <ServeList />
+        <ServerName />
+        <ChannelList />
     </div>
 </template>
 
 <script>
 
 import ServeList from "./ServeList/Index.vue";
+import ServerName from "./ServerName/Index.vue";
+import ChannelList from "./ChannelList/Index.vue";
 
 export default {
-  components: { ServeList }
+  components: { ServeList, ServerName, ChannelList }
 }
 </script>
 

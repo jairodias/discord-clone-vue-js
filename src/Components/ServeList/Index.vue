@@ -5,13 +5,11 @@
         <div class="separator"></div>
 
         <ServerButton :mentions="3"/>
-        <ServerButton />
         <ServerButton hasNotification />
         <ServerButton :mentions="36" hasNotification />
-        <ServerButton />
-        <ServerButton />
         <ServerButton  :mentions="41" hasNotification/>
 
+        <ServerButton v-for="server in 18" :key="server"/>
     </div>
 </template>
 <script>
@@ -33,6 +31,12 @@ export default {
         padding: 11px 0;
         max-height: 100vh;
         transition: .2s;
+
+        overflow-y: scroll;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .separador {
