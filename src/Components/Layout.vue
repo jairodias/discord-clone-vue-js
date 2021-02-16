@@ -3,6 +3,7 @@
         <ServeList />
         <ServerName />
         <ChannelList />
+        <UserInfo />
     </div>
 </template>
 
@@ -11,9 +12,10 @@
 import ServeList from "./ServeList/Index.vue";
 import ServerName from "./ServerName/Index.vue";
 import ChannelList from "./ChannelList/Index.vue";
+import UserInfo from "./UserInfo/Index.vue";
 
 export default {
-  components: { ServeList, ServerName, ChannelList }
+  components: { ServeList, ServerName, ChannelList, UserInfo }
 }
 </script>
 
