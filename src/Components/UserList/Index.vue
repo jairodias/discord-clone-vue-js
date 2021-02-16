@@ -1,7 +1,7 @@
 <template>
     <div class="user-list">
         <div class="role">Disponível - 1</div>
-        <UserRow nickname="Jairo Dias" />
+        <UserRow nickname="Jairo Dias" :online="true"/>
 
         <div class="role">Offline - 18</div>
         <UserRow nickname="Fulano de Tal" isBot/>
