@@ -6,6 +6,7 @@
         <UserInfo />
         <ChannelInfo />
         <ChannelData />
+        <UserList />
     </div>
 </template>
 
@@ -17,9 +18,18 @@ import ChannelList from "./ChannelList/Index.vue";
 import UserInfo from "./UserInfo/Index.vue";
 import ChannelInfo from "./ChannelInfo/Index.vue";
 import ChannelData from "./ChannelData/Index.vue";
+import UserList from "./UserList/Index.vue";
 
 export default {
-  components: { ServeList, ServerName, ChannelList, UserInfo, ChannelInfo, ChannelData}
+    components: { 
+        ServeList, 
+        ServerName, 
+        ChannelList, 
+        UserInfo, 
+        ChannelInfo, 
+        ChannelData, 
+        UserList
+    }
 }
 </script>
 

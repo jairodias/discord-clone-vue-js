@@ -1,7 +1,22 @@
 <template>
    <div class="channel-data">
        <div class="messages">
-           <ChannelMessage />
+           <ChannelMessage author="Jairo Dias" isBot  hasMention date="16/02/2021">
+                Está é uma mensagem
+           </ChannelMessage>
+
+           <ChannelMessage author="Jairo Dias" date="16/02/2021" isBot>
+                Está é uma mensagem
+           </ChannelMessage>
+
+            <ChannelMessage author="Jairo Dias" date="16/02/2021" v-for="message in 18" :key="message">
+                Está é uma mensagem
+           </ChannelMessage>
+
+           <ChannelMessage author="Jairo Dias" date="16/02/2021" hasMention>
+                <Mention>Username</Mention>, boa noite !
+           </ChannelMessage>
+
        </div>
 
        <div class="input-wrapper">
@@ -14,6 +29,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import At from "vue-material-design-icons/At";
 import ChannelMessage from "./ChannelMessage.vue";
 
@@ -22,7 +38,11 @@ export default {
         At,
         ChannelMessage
     }
-}
+};
+
+Vue.component("Mention", {
+    template: '<span class="mention"><slot /></span>'
+});
 </script>
 
 
@@ -41,6 +61,10 @@ export default {
             height: calc(100vh - 46px - 68px);
             max-height: calc(100vh - 46px - 68px);;
             overflow-y: scroll;
+
+            .channel-message:first-child {
+                margin-top: 0
+            }
 
             &::-webkit-scrollbar {
                 width: 8px;
